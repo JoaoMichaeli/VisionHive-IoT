@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "João Victor Michaeli",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": -14.36, "attrs": {} },
+    {
+      "type": "wokwi-neopixel",
+      "id": "neopixel",
+      "top": 34.9,
+      "left": 191,
+      "attrs": { "pixels": "1", "colorOrder": "GRB", "label": "NeoPixel" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": -64.8,
+      "left": 165,
+      "attrs": { "label": "Buzzer" }
+    },
+    {
+      "type": "wokwi-battery",
+      "id": "batt",
+      "top": 200,
+      "left": -150,
+      "attrs": { "voltage": "3.7" }
+    }
+  ],
+  "connections": [
+    [ "esp:2", "neopixel:DIN", "green", [ "v0" ] ],
+    [ "batt:+", "neopixel:VDD", "red", [ "v0" ] ],
+    [ "neopixel:GND", "esp:GND", "black", [ "v0" ] ],
+    [ "batt:+", "esp:VIN", "red", [ "v0" ] ],
+    [ "batt:-", "esp:GND", "black", [ "v0" ] ],
+    [ "esp:4", "buzzer:1", "green", [ "v0" ] ],
+    [ "buzzer:2", "esp:GND", "black", [ "v0" ] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ]
+  ],
+  "dependencies": {}
+}
