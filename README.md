@@ -1,14 +1,34 @@
+## Mapeamento Inteligente do Pátio - Mottu
+Solução de IoT com ESP32 para identificação, rastreamento e visualização em tempo real da localização de motos nos pátios das mais de 100 filiais da Mottu no Brasil e no México.
 
 # Documentação do Sistema de Localização VisionHive
 
-## Descrição Geral
-Este projeto consiste em um sistema de localização embarcado desenvolvido para ESP32, que utiliza Wi-Fi e protocolo MQTT para comunicação. O objetivo é possibilitar o rastreamento ou localização de um dispositivo, como uma motocicleta, por meio de comandos enviados remotamente.
+# Descrição Geral
+Este projeto tem como objetivo automatizar, otimizar e tornar mais eficiente a gestão das motos nos pátios da Mottu. A solução é baseada em um sistema embarcado utilizando microcontroladores ESP32 conectados via Wi-Fi, sensores físicos e um sistema web responsivo.
+
+O funcionamento se dá por meio de um módulo de localização embarcado nos ESP32, que se comunica utilizando o protocolo MQTT através de redes Wi-Fi. Isso permite o rastreamento e a localização em tempo real dos veículos, como motocicletas, diretamente pela plataforma web. A comunicação é feita por meio de comandos enviados remotamente, tornando o processo mais ágil e confiável.
+
+A proposta visa eliminar o controle manual, garantindo maior segurança, escalabilidade e precisão na operação dos pátios. Com isso, a localização, o monitoramento e a gestão dos veículos se tornam muito mais eficientes, reduzindo erros operacionais e aumentando a produtividade.
+
+## Objetivo
+- Identificar rapidamente uma moto específica no pátio utilizando um alerta visual e/ou sonoro.
+- Fornecer uma visualização **em tempo real** da chamada e do status de resposta da moto.
+- Garantir escalabilidade para aplicação em mais de 100 filiais com diferentes layouts.
+- Oferecer uma interface intuitiva, acessível por desktop e mobile.
+- Integrar sensores IoT nas motos para coleta automatizada de dados e status.
 
 ## Funcionalidades Principais
 - Conexão à rede Wi-Fi.
 - Comunicação com um broker MQTT (HiveMQ) para envio e recebimento de mensagens.
 - Controle de um alarme sonoro (buzzer) e visual (NeoPixel) via comandos MQTT.
 - Feedback visual do estado do dispositivo (conectando, conectado, erro, alarme ativo).
+
+## Alimentação e Eficiência Energética
+
+- A bateria **18650 recarregável (2500 mAh)** continua sendo a fonte principal de energia, garantindo autonomia prolongada.
+- O sistema agora conta com uma **placa solar integrada à caixa 3D**, que permite o carregamento contínuo durante o dia, garantindo funcionamento autossustentável nos pátios.
+- O módulo **TP4056** permanece responsável pelo gerenciamento de carga, oferecendo carregamento seguro e proteção contra sobrecarga e descarga excessiva.
+- A caixa 3D foi adaptada para acomodar a placa solar e mantém proteção **IP54**, garantindo resistência à poeira e respingos de água, ideal para uso em ambientes externos.
 
 ## Hardware Utilizado
 - **ESP32**
@@ -100,6 +120,3 @@ VisionHive|MOTO_001|ALARME_ATIVO
 3. Mantém conexão MQTT ativa.
 4. Monitora comandos MQTT e responde aos comandos recebidos.
 5. Publica estados operacionais no tópico de status.
-
----
-**Desenvolvido por:** Projeto VisionHive
