@@ -14,8 +14,8 @@
     {
       "type": "wokwi-buzzer",
       "id": "buzzer",
-      "top": -64.8,
-      "left": 165,
+      "top": -122.4,
+      "left": 136.2,
       "attrs": { "label": "Buzzer" }
     },
     {
@@ -23,7 +23,21 @@
       "id": "batt",
       "top": 200,
       "left": -150,
-      "attrs": { "voltage": "3.7" }
+      "attrs": { "voltage": "3.7", "label": "Bateria 18650" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir",
+      "top": -130.4,
+      "left": -132.18,
+      "attrs": { "label": "PIR Motion" }
+    },
+    {
+      "type": "wokwi-switch",
+      "id": "switch",
+      "top": 150,
+      "left": -60,
+      "attrs": { "label": "Botão Reset" }
     }
   ],
   "connections": [
@@ -34,6 +48,11 @@
     [ "batt:-", "esp:GND", "black", [ "v0" ] ],
     [ "esp:4", "buzzer:1", "green", [ "v0" ] ],
     [ "buzzer:2", "esp:GND", "black", [ "v0" ] ],
+    [ "esp:13", "pir:OUT", "purple", [ "v0" ] ],
+    [ "pir:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "pir:GND", "esp:GND", "black", [ "v0" ] ],
+    [ "esp:12", "switch:1.l", "orange", [ "v0" ] ],
+    [ "switch:2.r", "esp:GND", "black", [ "v0" ] ],
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ]
   ],
