@@ -1,4 +1,0 @@
-[wokwi]
-version = 1
-elf = "../.pio/build/vision/firmware.elf"
-firmware = "../.pio/build/vision/firmware.bin"
