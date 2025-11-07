@@ -26,6 +26,14 @@ O sistema IoT VisionHive integra um dispositivo ESP32 com um backend Spring Boot
 - Senha:
   ```operador123```
 
+# Imagens web
+
+### Motos
+- **Motos cadastradas**
+  ![Motos cadastradas](imagens/motos.png)
+
+
+
 ### Componentes Principais:
 
 1.  **Dispositivo ESP32:** Responsável por interagir com os hardwares Buzzer e LED, conectar-se à rede Wi-Fi e comunicar-se com o backend Java.
