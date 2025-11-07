@@ -32,7 +32,18 @@ O sistema IoT VisionHive integra um dispositivo ESP32 com um backend Spring Boot
 - **Motos cadastradas**
   ![Motos cadastradas](imagens/motos.png)
 
+### Dashboard
+- **Esp desligado**
+  ![iot_desligado](imagens/iot_desligado.png)
+  ![dashboard_desconectado](imagens/dashboard_desconectado.png)
 
+- **Esp ligado**
+  ![iot_ligado](imagens/iot_ligado.png)
+  ![dashboard_conectado](imagens/dashboard_conectado.png)
+
+### Localizando
+- **Acionamento do esp**
+  ![localizando](imagens/localizando.png)
 
 ### Componentes Principais:
 
@@ -87,3 +98,13 @@ O backend é construído com Spring Boot e fornece as seguintes funcionalidades:
     *   Essa ação atualiza o `estadoBuzzerGlobal` no backend e registra um log no banco de dados (`BuzzerLog`).
     *   Quando o ESP32 consulta o `/api/comando-global-esp` e detecta uma mudança no comando, ele aciona ou desaciona fisicamente o buzzer e o LED conectados.
 5.  **Monitoramento:** O status atualizado do ESP32 pode ser verificado a qualquer momento através do endpoint `/api/status` no backend.
+
+---
+
+## Integrantes
+
+| Nome                   | RM       |
+|------------------------|----------|
+| João Victor Michaeli   | RM555678 |
+| Larissa Muniz          | RM557197 |
+| Henrique Garcia        | RM558062 |
