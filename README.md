@@ -1,4 +1,4 @@
-# VisionHive IoT System
+# VisionHive IoT
 
 ## Visão Geral do Sistema
 
